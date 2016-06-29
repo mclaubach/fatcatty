@@ -1,0 +1,9 @@
+<div>
+  <%= link_to "better than nothing", root_path %>
+      <% if admin_signed_in? %>
+       <%= link_to('logout', destroy_admin_session_path) %>
+       <%= render partial: "posts/new" %>
+      <% else %>
+       <%= link_to('login', new_admin_session_path) %>
+      <% end %>
+</div>

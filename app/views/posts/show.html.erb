@@ -1,0 +1,14 @@
+
+  <div class="large-12 columns border border-box glassy-bg mt pt" html="true">
+    <strong><%= h(@post.title) %></strong><br />
+    <sup class="text-muted">from <%= time_ago_in_words(@post.created_at)%> ago</sup><br />
+    <div class="mb pb">
+      <%= h(raw @post.body) %>
+    </div>
+    <div class="tags">
+      <%=raw tag_links(@post.all_tags)%>
+    </div>
+    <%= link_to "delete", @post, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    <br><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+  </div>
