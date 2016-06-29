@@ -1,6 +1,6 @@
-thanks to work of nouran mahmoud
-thanks to barry bonds
-things left to do  
+thanks to work of nouran mahmoud  
+thanks to barry bonds  
+things left to do
 * about
 * scoring / leaderboard
 * favi / icons
