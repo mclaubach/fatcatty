@@ -5,8 +5,11 @@
     <div class="mb pb">
       <%= h(raw post.body) %>
     </div>
+    <div class="mb pb">
+      score: <%= raw number_with_precision(post.score, :precision => 0) %>
+    </div>
     <div class="tags">
-      <%=raw tag_links(post.all_tags)%>
+     tags: <%=raw tag_links(post.all_tags)%>
     </div>
     <br><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
   </div>

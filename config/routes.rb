@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'posts/index'
   get 'posts/create'
 
+
   root 'posts#index'
+  resources :archives, only: [:show, :index]
   resources :posts, only: [:create, :show, :destroy]
   get 'tags/:tag', to: 'posts#index', as: "tag"
 

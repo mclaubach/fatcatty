@@ -8,7 +8,10 @@
     <div class="tags">
       <%=raw tag_links(@post.all_tags)%>
     </div>
-    <%= link_to "delete", @post, method: :delete,
-                                  data: { confirm: "You sure?" } %>
     <br><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+    <% if admin_signed_in? %>
+      <%= link_to "delete", @post, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% else %>
+    <% end %>
   </div>
