@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require posts
 //= require_tree .
 //= require ckeditor/init
 
 $(function(){ $(document).foundation(); });
+
+

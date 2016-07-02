@@ -1,3 +1,4 @@
+<div id="newpost">
 <div class="row text-center">
   <%= form_for(Post.new, remote: true) do |f| %>
     <div class="large-10 large-centered columns">
@@ -17,3 +18,5 @@
     </div>
   <% end %>
 </div>
+</div>
+<input type='button' id='hideshow' value='hide/show'>
