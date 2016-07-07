@@ -20,3 +20,9 @@
 </div>
 </div>
 <input type='button' id='hideshow' value='hide/show'>
+
+<script type="text/javascript">jQuery(document).ready(function(){
+    jQuery('#hideshow').on('click', function(event) {
+         jQuery('#newpost').toggle('show');
+    });
+  });</script>
