@@ -6,7 +6,7 @@
       <%= h(raw @post.body) %>
     </div>
     <div class="tags">
-      <%=raw tag_links(@post.all_tags)%>
+      tags: <%=raw tag_links(@post.all_tags)%>
     </div>
     <br><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
     <% if admin_signed_in? %>

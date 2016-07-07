@@ -3,6 +3,10 @@ class PostsController < ApplicationController
    def show
     @post = Post.find(params[:id])
   end
+  
+  def showrandom
+    @post = Post.offset(rand(Post.count)).first
+  end
 
   def index
     if params[:tag]
