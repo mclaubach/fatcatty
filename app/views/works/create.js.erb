@@ -1,0 +1,4 @@
+var new_work = $("<%= escape_javascript(render(partial: @work))%>").hide();
+$('#works').prepend(new_work);
+$('#work_<%= @work.id %>').fadeIn('slow');
+$('#new_work')[0].reset();

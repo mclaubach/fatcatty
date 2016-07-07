@@ -1,0 +1,6 @@
+<%= render partial: "works/new" %>
+
+<% @works.each do |work| %>
+    <%= work.title %>
+    <%= image_tag work.image %>
+<% end %>

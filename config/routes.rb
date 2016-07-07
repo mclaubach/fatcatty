@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+
   devise_for :admins, controllers: { registrations: "registrations"}
   mount Ckeditor::Engine => '/ckeditor'
   get 'posts/index'
   get 'posts/create'
 
-
   root 'posts#index'
+  resources :works, only: [:index, :show, :create, :destroy]
   resources :archives, only: [:show, :index]
   resources :posts, only: [:create, :show, :destroy]
   get 'tags/:tag', to: 'posts#index', as: "tag"
