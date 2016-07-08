@@ -1,6 +1,9 @@
 <%= render partial: "works/new" %>
-
-<% @works.each do |work| %>
+<div style="width:1000px;">
+  <div class="inline-list" style="width:325px;">
+    <% @works.each do |work| %>
     <%= work.title %>
     <%= image_tag work.image %>
-<% end %>
+  <% end %>
+  </div>
+</div>

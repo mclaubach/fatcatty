@@ -13,12 +13,9 @@ class WorksController < ApplicationController
 
   def create
      @work = Work.new(work_params)
-     respond_to do |format|
       if @work.save
-        format.js # Will search for create.js.erb
+          redirect_to works_path
       else
-        format.html { render root_path }
-      end
     end
   end
 
