@@ -1,9 +1,10 @@
-<%= render partial: "works/new" %>
-<div style="width:1000px;">
+  <% if admin_signed_in? %>
+   <%= render partial: "works/new" %>
+   <% else %>
+  <% end %>
   <div class="inline-list" style="width:325px;">
     <% @works.each do |work| %>
     <%= work.title %>
-    <%= image_tag work.image %>
+    <%= link_to image_tag(work.image), work %>
   <% end %>
-  </div>
 </div>
