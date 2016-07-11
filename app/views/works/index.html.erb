@@ -1,10 +1,12 @@
-  <% if admin_signed_in? %>
-   <%= render partial: "works/new" %>
-   <% else %>
-  <% end %>
-  <div class="inline-list" style="width:325px;">
-    <% @works.each do |work| %>
-    <%= work.title %>
-    <%= link_to image_tag(work.image), work %>
-  <% end %>
-</div>
+<% @works.in_groups_of(3).each do |group| %>
+  <div class="row">
+    <div class="three columns">
+      <% group.each do |work| %>
+        <div class="work">
+          <%= work.title if work %><br>
+          <%= link_to image_tag(work.image), work if work %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

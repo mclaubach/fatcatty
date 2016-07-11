@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
-  
+
   def showrandom
     @post = Post.offset(rand(Post.count)).first
   end
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all
+      @posts = Post.paginate(page: params[:page], per_page: 15).order('created_at DESC')
     #  @posts = Post.paginate(:page => params[:page], :per_page => 10) start of pagination
     end
   end

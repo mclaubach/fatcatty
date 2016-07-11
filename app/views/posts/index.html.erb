@@ -1,8 +1,10 @@
 <%= render partial: "posts/new" %>
   <div class= "large-9 columns" id="posts">
-    <%= render partial: @posts.reverse %>
+    <%= render partial: @posts %>
+    <div id="pagi" class="small-centered">
+      <%= paginate @posts %>
+    </div>
   </div>
-
   <div class="tags-cloud glassy-bg large-12 columns">
     <h4> tag cloud</h4>
     <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>

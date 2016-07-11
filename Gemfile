@@ -18,7 +18,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'devise'
 gem 'high_voltage', '~> 3.0.0'
-
+gem 'kaminari'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

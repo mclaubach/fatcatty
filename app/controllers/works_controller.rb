@@ -11,6 +11,12 @@ class WorksController < ApplicationController
     @work = Work.find(params[:id])
   end
 
+  def destroy
+     Work.find(params[:id]).destroy
+     flash[:success] = "work deleted"
+     redirect_to works_path
+  end
+
   def create
      @work = Work.new(work_params)
       if @work.save

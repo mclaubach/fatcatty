@@ -2,3 +2,8 @@
 <%= @work.title %>
 <%= image_tag @work.image %>
 </div>
+<% if admin_signed_in? %>
+      <%= link_to "delete", @post, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% else %>
+    <% end %>
