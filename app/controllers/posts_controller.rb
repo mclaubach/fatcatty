@@ -23,9 +23,10 @@ class PostsController < ApplicationController
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
+      @postspag = Post.paginate(page: params[:page], per_page: 15).order('created_at DESC')
     else
       @posts = Post.paginate(page: params[:page], per_page: 15).order('created_at DESC')
-    #  @posts = Post.paginate(:page => params[:page], :per_page => 10) start of pagination
+      @postspag = Post.paginate(page: params[:page], per_page: 15).order('created_at DESC')
     end
   end
 

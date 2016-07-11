@@ -1,10 +1,14 @@
-thanks to work of nouran mahmoud
+/thanks to work of nouran mahmoud
+/thanks to barry bonds
+/thanks to yg
+/thanks to all the homies
 
-thanks to barry bonds
-
-things left to do
-
-* about
-* scoring / leaderboard
-* favi / icons
-* submit for review
+=== things left to do
+---
+* finish about
+* style the gallery
+* get some cool icons
+* get nav how i like it
+* think about hte tag pagination yung, could prolly do it better but it works now
+* get on heroku or whatever
+* more cool features
