@@ -6,6 +6,18 @@ class PostsController < ApplicationController
 
   def showrandom
     @post = Post.offset(rand(Post.count)).first
+    redirect_to @post
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
   end
 
   def index

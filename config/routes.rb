@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   get 'posts/index'
   get 'posts/create'
+  get 'posts/showrandom'
 
   root 'posts#index'
   resources :works, only: [:index, :show, :create, :destroy]

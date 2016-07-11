@@ -5,7 +5,8 @@
   view posts tagged:
     <a href="../tags/culture">culture</a>
     <a href="../tags/music">music</a>
-    <a href="../tags/videos">videos</a>
+    <a href="../tags/videos">videos</a> |
+    <%= link_to('random post', posts_showrandom_path) %> |
       <% if admin_signed_in? %>
        <%= link_to('logout', destroy_admin_session_path) %>
       <% else %>
