@@ -3,19 +3,19 @@
   <%= link_to image_tag("logonav.png"), root_path %>
 </div>
 <div style="padding-top: 10px; padding-botton: 5px;">
-  <%= link_to('archive', archives_path) %>
-  <%= link_to('gallery', works_path) %>
-  <%= link_to('random post', posts_showrandom_path) %>
+  <%= link_to('archive', archives_path) %>,
+  <%= link_to('gallery', works_path) %>,
+  <%= link_to('random post', posts_showrandom_path) %>,
+  <% if admin_signed_in? %>
+    <%= link_to('logout', destroy_admin_session_path) %>
+   <% else %>
+    <%= link_to('login', new_admin_session_path) %>
+  <% end %>
 </div>
 <div>
   view posts tagged:
-    <a href="../tags/culture">culture</a>
-    <a href="../tags/music">music</a>
+    <a href="../tags/culture">culture</a>,
+    <a href="../tags/music">music</a>,
     <a href="../tags/videos">videos</a>
-      <% if admin_signed_in? %>
-       <%= link_to('logout', destroy_admin_session_path) %>
-      <% else %>
-       <%= link_to('login', new_admin_session_path) %>
-      <% end %>
 </div>
 </div>

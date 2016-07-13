@@ -9,6 +9,6 @@
 * style the gallery
 * get some cool icons
 * get nav how i like it
-* think about hte tag pagination yung, could prolly do it better but it works now
+* think about the tag pagination yung, could prolly do it better but it works now
 * get on heroku or whatever
 * more cool features
