@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'posts#index'
   resources :works, only: [:index, :show, :create, :destroy]
   resources :archives, only: [:show, :index]
-  resources :posts, only: [:create, :show, :destroy]
+  resources :posts, only: [:create, :show, :destroy, :index]
   get 'tags/:tag', to: 'posts#index', as: "tag"
 
   # The priority is based upon order of creation: first created -> highest priority.
