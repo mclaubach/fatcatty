@@ -19,6 +19,7 @@ gem 'paperclip'
 gem 'devise'
 gem 'high_voltage', '~> 3.0.0'
 gem 'kaminari'
+gem 'non-stupid-digest-assets', '~> 1.0.4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
