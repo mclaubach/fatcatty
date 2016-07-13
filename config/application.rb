@@ -1,14 +1,13 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+config.assets.enabled = true
+config.assets.precompile += Ckeditor.assets
+config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
-config.assets.precompile += Ckeditor.assets
-config.assets.precompile += %w( ckeditor/* )
-config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
 module Music
   class Application < Rails::Application
