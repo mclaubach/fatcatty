@@ -11,9 +11,15 @@ class Post < ActiveRecord::Base
   def all_tags
     self.tags.map(&:name).join(", ")
   end
-  
+
   def self.tagged_with(name)
     Tag.find_by_name!(name).posts
   end
+
+  def self.tag_counts
+    Tag.select("tags.id, tags.name, count(taggings.tag_id) as count").
+      joins(:taggings).select("taggings.tag_id, tags.id, tags.name")
+  end
+
 
 end
