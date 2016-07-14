@@ -1,14 +1,17 @@
-/thanks to work of nouran mahmoud
-/thanks to barry bonds
-/thanks to yg
-/thanks to all the homies
+/thanks to work of nouran mahmoud  
+/thanks to barry bonds  
+/thanks to yg  
+/thanks to all the homies  
 
 === things left to do
 ---
-* finish about
-* style the gallery
+* finish about page
+* style the gallery - frames and spacing
 * get some cool icons
 * get nav how i like it
-* think about the tag pagination yung, could prolly do it better but it works now
-* get on heroku or whatever
 * more cool features
+* color code tags?
+
+=== key parts i gotta remember
+* env on heroku
+* aws keys
