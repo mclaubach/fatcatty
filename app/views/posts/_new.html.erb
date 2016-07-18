@@ -1,5 +1,5 @@
 <% if admin_signed_in? %>
-<div id="newpost">
+<div id="newpost" style="display:none;">
 <div class="row text-center">
   <%= form_for(Post.new, remote: true) do |f| %>
     <div class="large-10 large-centered columns">
