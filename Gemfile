@@ -21,7 +21,7 @@ gem 'devise'
 gem 'high_voltage', '~> 3.0.0'
 gem 'kaminari'
 gem 'non-stupid-digest-assets'
-
+gem 'rails_12factor', group: :production
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'chart-js-rails'
