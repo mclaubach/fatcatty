@@ -16,6 +16,7 @@
 //= require posts
 //= require_tree .
 //= require ckeditor/init
+//= require Chart
 
 $(function(){ $(document).foundation(); });
 

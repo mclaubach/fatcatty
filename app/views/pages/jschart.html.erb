@@ -1,0 +1,112 @@
+<div class= "large-9 columns" id="chartcontainer" style="float:left;">
+<canvas id="myChart" width="40%" height="10%"></canvas>
+<canvas id="lineChart" width="40%" height="10%"></canvas>
+<canvas id="doughChart" width="40%" height="10%"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["rich", "gucci", "the", "homie", "baby", "i", "you"],
+        datasets: [{
+            label: '# of times RHQ uses a word in reloaded',
+            data: [13, 8, 19, 5, 8, 14, 7],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(225, 199, 164, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(205, 129, 34, 1)'
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+<script>
+  var ctx = document.getElementById("lineChart");
+  var lineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+            backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ],
+            hoverBackgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ]
+        }]
+    },
+    options: {
+        
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+</script>
+<script>
+var ctx = document.getElementById("doughChart");
+var doughChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+    labels: [
+        "mind",
+        "body",
+        "spirit"
+    ],
+    datasets: [{
+            label: 'my makeup',
+            data: [1, 1, 1],
+            backgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ],
+            hoverBackgroundColor: [
+                "#FF6384",
+                "#36A2EB",
+                "#FFCE56"
+            ]
+        }]
+},
+});
+  </script>
