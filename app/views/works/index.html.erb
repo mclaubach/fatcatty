@@ -1,7 +1,8 @@
 <%= render partial: "works/new" %>
 <% @works.in_groups_of(3).each do |group| %>
-  <div class="row">
+<div class="row">
     <div class="three columns">
+      <%= sortable "created_at", "Released" %>
       <% group.each do |work| %>
         <div class="work">
           <%= work.title if work %><br>
