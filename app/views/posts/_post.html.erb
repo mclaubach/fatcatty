@@ -3,7 +3,7 @@
     <strong><%= link_to h(post.title), post %></strong><br />
     <sup class="text-muted">from <%= time_ago_in_words(post.created_at)%> ago</sup><br />
     <div class="mb pb" id="<%= post.id %>">
-      <%= h(raw post.body) %>
+      <%= h(raw post.body) %><br>
     </div>
     <div class="mb pb">
       score: <%= raw number_with_precision(post.score, :precision => 0) %>/100
