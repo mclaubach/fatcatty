@@ -1,17 +1,22 @@
-/thanks to work of nouran mahmoud  
-/thanks to barry bonds  
-/thanks to yg  
-/thanks to all the homies  
+/thanks to work of nouran mahmoud
+
+/thanks to work of barry bonds
+
+/thanks to trance rap, the radio dept, wild nothing, and v a p o r w a v e
+
+/thanks to all the homies
+
+=== some features
+img gallery
+post tagging scoring and archives
+easy cms and text editor
+rss feed
 
 === things left to do
 ---
-* finish about page
-* style the gallery - frames and spacing
-* get some cool icons
+*
+* mb style the gallery
+* get more cool icons
 * get nav how i like it
 * more cool features
 * color code tags?
-
-=== key parts i gotta remember
-* env on heroku
-* aws keys

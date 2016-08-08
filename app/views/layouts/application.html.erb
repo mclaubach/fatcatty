@@ -11,6 +11,8 @@
     <%= csrf_meta_tags %>
 
     <%= favicon_link_tag 'favicon.ico' %>
+    <%= auto_discovery_link_tag :atom, "/feeds.atom" %>
+    <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
   </head>
 
