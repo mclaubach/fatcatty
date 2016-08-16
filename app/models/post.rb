@@ -22,6 +22,10 @@ class Post < ActiveRecord::Base
     Tag.select("tags.id, tags.name, count(taggings.tag_id) as count").
       joins(:taggings).select("taggings.tag_id, tags.id, tags.name")
   end
+  
+  def to_param
+    "#{id} #{title}".parameterize
+  end
 
 
 end
