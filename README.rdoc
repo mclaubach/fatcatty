@@ -14,9 +14,9 @@ rss feed
 
 === things left to do
 ---
-*
 * mb style the gallery
 * get more cool icons
 * get nav how i like it
 * more cool features
-* color code tags?
+* color code tags
+* music reviews
