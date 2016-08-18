@@ -18,5 +18,5 @@ rss feed
 * get more cool icons
 * get nav how i like it
 * more cool features
-* color code tags
+* mb color code tags
 * music reviews
