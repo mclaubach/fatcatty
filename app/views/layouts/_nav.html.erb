@@ -7,6 +7,7 @@
   <%= image_tag("bullet.png") %><%= link_to('gallery', works_path) %>
   <%= image_tag("bullet.png") %><%= link_to('random post', posts_showrandom_path) %>
   <%= image_tag("bullet.png") %><a href="../abt">about</a>
+  <%= image_tag("bullet.png") %><a href="../golf">golf</a>
   <% if admin_signed_in? %>
     <%= image_tag("bullet.png") %><%= link_to('logout', destroy_admin_session_path) %>
    <% else %>
