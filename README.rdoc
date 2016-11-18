@@ -11,6 +11,7 @@ img gallery
 post tagging scoring and archives
 easy cms and text editor
 rss feed
+golf scoreboard
 
 === things left to do
 ---
