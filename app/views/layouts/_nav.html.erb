@@ -3,11 +3,11 @@
   <%= link_to image_tag("logonav.png"), root_path %>
 </div>
 <div style="padding-top: 10px; padding-botton: 5px;">
-  <%= image_tag("archive.png") %><%= link_to(' archive', archives_path) %>
-  <%= image_tag("gallery.png") %><%= link_to(' gallery', works_path) %>
-  <%= image_tag("random.png") %><%= link_to(' random post', posts_showrandom_path) %>
-  <%= image_tag("about.png") %><a href="../abt"> about</a>
-  <%= image_tag("golf.png") %><a href="../golf"> golf</a>
+  <%= image_tag("archive.png") %><%= link_to(' archive ', archives_path) %>
+  <%= image_tag("gallery.png") %><%= link_to(' gallery ', works_path) %>
+  <%= image_tag("random.png") %><%= link_to('random post ', posts_showrandom_path) %>
+  <%= image_tag("about.png") %><a href="../abt"> about </a>
+  <%= image_tag("golf.png") %><a href="../golf"> golf </a>
   <% if admin_signed_in? %>
     <%= image_tag("bullet.png") %><%= link_to('logout', destroy_admin_session_path) %>
    <% else %>
