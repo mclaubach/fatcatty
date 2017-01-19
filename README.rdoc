@@ -1,5 +1,3 @@
-/thanks to work of nouran mahmoud
-
 /thanks to work of barry bonds
 
 /thanks to trance rap, the radio dept, wild nothing, and v a p o r w a v e
@@ -15,9 +13,9 @@ golf scoreboard
 
 === things left to do
 ---
-* mb style the gallery
-* get more cool icons
+* gallery pagination @ 100
+* chatbox
 * get nav how i like it
 * more cool features
 * mb color code tags
-* music reviews
+* update golf
