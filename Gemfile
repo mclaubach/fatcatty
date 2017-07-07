@@ -18,6 +18,7 @@ gem 'ckeditor'
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 gem 'aws-sdk'
 gem 'devise'
+gem 'angularjs-rails'
 gem 'high_voltage', '~> 3.0.0'
 gem 'kaminari'
 gem 'non-stupid-digest-assets'
@@ -53,4 +54,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
