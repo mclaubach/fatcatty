@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -18,7 +18,6 @@ gem 'ckeditor'
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 gem 'aws-sdk'
 gem 'devise'
-gem 'angularjs-rails'
 gem 'high_voltage', '~> 3.0.0'
 gem 'kaminari'
 gem 'non-stupid-digest-assets'
