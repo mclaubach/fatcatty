@@ -1,6 +1,6 @@
 <%= render partial: "works/new" %>
-<div style="margin-left:50px"><h4><%= sortable "created_at", "view dsc/asc" %></h4></div>
-<% @works.reverse.in_groups_of(3).each do |group| %>
+<div style="margin-left:50px"><h4><%= sortable "created_at", "view dsc/asc" %></h4></div><br>
+<% @works.in_groups_of(3).each do |group| %>
 <div class="row">
     <div class="three columns">
       <% group.each do |work| %>
@@ -12,4 +12,4 @@
     </div>
   </div>
 <% end %>
-<%= paginate @works %>
+<center><%= paginate @works %></center>
