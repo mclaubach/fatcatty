@@ -7,7 +7,7 @@ class WorksController < ApplicationController
 
   def index
 #   @works = Work.all
-  @works = Work.paginate(page: params[:page], per_page: 12).order('created_at DESC')
+  @works = Work.paginate(page: params[:page], per_page: 9).order('created_at DESC')
   end
 
   def show
