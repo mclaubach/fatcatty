@@ -1111,6 +1111,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk
+  bundler (= 1.17.3)
   byebug
   ckeditor
   coffee-rails (~> 4.1.0)
@@ -1135,4 +1136,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
