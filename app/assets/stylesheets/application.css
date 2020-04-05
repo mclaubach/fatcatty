@@ -173,3 +173,7 @@ body {
   padding-left: 16px;
   padding-top: 16px;
 }
+
+.work a {
+  max-width: 300px;
+}
