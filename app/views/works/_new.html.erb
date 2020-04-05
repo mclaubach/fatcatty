@@ -2,13 +2,13 @@
 <div id="newwork">
 <div class="row text-center">
   <%= form_for(Work.new) do |f| %>
-    <div class="large-10 large-centered columns">
+    <div>
       <%= f.text_field :title, placeholder: "title" %>
     </div>
-    <div class="large-10 large-centered columns">
+    <div>
       <%= f.file_field :image %>
     </div>
-    <div class="large-10 large-centered columns">
+    <div>
       <%= f.submit "s u b m i t", class: "button"%>
     </div>
   <% end %>

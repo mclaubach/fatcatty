@@ -20,6 +20,10 @@ label {
   color: white;
 }
 
+a {
+  color: rgb(48, 128, 222);
+}
+
 .pagination {
   display: inline-block;
   color: white;
@@ -44,6 +48,7 @@ label {
   float:left;
   width: 100%;
   padding-bottom: 16px;
+  padding-left: 32px;
 }
 
 .fatcattyLogo {
@@ -53,12 +58,13 @@ label {
 
 .navItems {
   padding-top: 16px;
+  padding-left: 16px;
 }
 
 .navItems ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 8px;
   overflow: hidden;
 }
 
@@ -138,7 +144,6 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .archiveList li a {
   display: inline-block;
-  color: white;
   text-decoration: none;
   padding-left: 2px;
   padding-top: 0px;
@@ -146,10 +151,6 @@ li a:hover, .dropdown:hover .dropbtn {
 
 .archiveList a:hover {
   background-color: blue;
-}
-
-.tags a {
-  color: white;
 }
 
 .postTitle a {
@@ -162,4 +163,8 @@ a:visited {
 
 .textMuted {
   font-size: 100%;
+}
+
+.postSpacer {
+  padding-bottom: 8px;
 }
