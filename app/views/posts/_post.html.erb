@@ -1,13 +1,15 @@
 <%= div_for post do %>
-    <strong><%= link_to h(post.title), post %></strong><br />
-    <sup class="text-muted">from <%= time_ago_in_words(post.created_at)%> ago</sup><br />
-    <div class="mb pb" id="<%= post.id %>">
-      <%= h(raw post.body) %><br>
+    <span class="postTitle"><%= link_to h(post.title), post %></span>
+    <div id="<%= post.id %>">
+      <%= h(raw post.body) %>
     </div>
-    <div class="mb pb">
+    <div>
       score: <%= raw number_with_precision(post.score, :precision => 0) %>/100
     </div>
     <div class="tags">
      tags: <%=raw tag_links(post.all_tags)%>
+    </div>
+    <div class="from">
+      from <%= time_ago_in_words(post.created_at)%> ago
     </div>
 <% end %>

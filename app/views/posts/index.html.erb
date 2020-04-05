@@ -1,4 +1,8 @@
-<div class="bContainer" id="posts">
+<% if admin_signed_in? %>
+<%= link_to "new post", posts_new_path %>
+<% else %>
+<% end %>
+<h2>blog</h2>
 <%= render partial: @posts %>
 </div>
 <div class="tags-cloud">
@@ -7,5 +11,3 @@
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>
-
-<%= link_to "new post", posts_new_path %>
