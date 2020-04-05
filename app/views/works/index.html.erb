@@ -6,8 +6,8 @@
     <div class="three columns">
       <% group.each do |work| %>
         <div class="work">
-          <%= work.title if work %>
-          <%= link_to image_tag(work.image), work if work %>
+          <div><%= work.title if work %></div>
+          <div><%= link_to image_tag(work.image), work if work %></div>
         </div>
       <% end %>
     </div>
