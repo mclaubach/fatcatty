@@ -175,7 +175,11 @@ body {
 }
 
 .work {
-  max-width: 500px;
   padding-left: 5px;
   padding-right: 5px;
+  float: left;
+}
+
+.work a img{
+  max-width: 400px;
 }
