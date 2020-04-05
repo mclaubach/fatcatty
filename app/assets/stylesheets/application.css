@@ -168,3 +168,8 @@ a:visited {
 .postSpacer {
   padding-bottom: 24px;
 }
+
+body {
+  padding-left: 5%;
+  padding-top: 16px;
+}
