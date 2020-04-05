@@ -4,7 +4,7 @@
 <%= image_tag @work.image %>
 <%= @work.created_at.strftime("%F") %><br>
 <% if admin_signed_in? %>
-      <%= link_to "delete", @post, method: :delete,
+      <%= link_to "delete", @work, method: :delete,
                                   data: { confirm: "You sure?" } %>
       <% else %>
     <% end %>
