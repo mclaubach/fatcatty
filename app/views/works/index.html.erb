@@ -1,16 +1,8 @@
 <h2>works</h2>
 <h4><%= sortable "created_at", "view dsc/asc" %></h4>
 </div>
-<% @works.in_groups_of(3).each do |group| %>
-<div class="row">
-    <div class="three columns">
-      <% group.each do |work| %>
-        <div class="work">
-          <div><%= work.title if work %></div>
-          <div><%= link_to image_tag(work.image), work if work %></div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+<% @works.each do |work| %>
+  <div><%= work.title if work %></div>
+  <div><%= link_to image_tag(work.image), work if work %></div>
 <% end %>
 <div><%= paginate @works %></div>
