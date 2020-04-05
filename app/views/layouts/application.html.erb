@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "(๑ↀᆺↀ๑) fat catty (๑ↀᆺↀ๑)" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "(๑ↀᆺↀ๑) fatcatty (๑ↀᆺↀ๑)" %></title>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -14,18 +15,14 @@
     <%= auto_discovery_link_tag :atom, "/feeds.atom" %>
     <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 
-  </head>
+    <script type="text/javascript">
+      for(var instanceName in CKEDITOR.instances)
+          CKEDITOR.instances[instanceName].updateElement();
+    </script>
 
-<script type="text/javascript">$(document).ready(function() {
-    if ($('textarea').length > 0) {
-        var data = $('textarea');
-        $.each(data, function(i) {
-            CKEDITOR.replace(data[i].id);
-        });
-    }
-});</script>
+  </head>
   <body>
-    <div class= "large-12 columns" id="body">
+    <div>
       <%= render "layouts/nav" %>
       <%= yield %>
     </div>

@@ -5,7 +5,7 @@ ruby '2.5.0'
 gem 'rails', '4.2.11'
 gem 'bundler', '1.14.4'
 # Use sqlite3 as the database for Active Record
-gem 'pg','0.15'
+gem 'pg','0.18'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets

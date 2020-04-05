@@ -1,5 +1,4 @@
 <%= div_for post do %>
-  <div class="large-12 columns border border-box glassy-bg mt pt" html="true">
     <strong><%= link_to h(post.title), post %></strong><br />
     <sup class="text-muted">from <%= time_ago_in_words(post.created_at)%> ago</sup><br />
     <div class="mb pb" id="<%= post.id %>">
@@ -11,6 +10,4 @@
     <div class="tags">
      tags: <%=raw tag_links(post.all_tags)%>
     </div>
-    <br><p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-  </div>
 <% end %>

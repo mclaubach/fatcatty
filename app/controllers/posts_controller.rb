@@ -36,20 +36,17 @@ class PostsController < ApplicationController
       redirect_to root_path
     end
 
-   def create
-    @post = Post.new(post_params)
-    respond_to do |format|
-      if @post.save
-        format.js # Will search for create.js.erb
-      else
-        format.html { render root_path }
-      end
-    end
-  end
+    def create
+     @post = Post.new(post_params)
+       if @post.save
+         redirect_to root_path
+       else
+         format.html { render root_path }
+       end
+     end
+   end
 
   private
    def post_params
      params.require(:post).permit(:title, :body, :score, :all_tags)
    end
-
-end

@@ -12,7 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require posts
 //= require_tree .
-
 $(function(){ $(document).foundation(); });

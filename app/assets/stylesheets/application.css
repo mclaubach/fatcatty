@@ -19,3 +19,53 @@
 label {
   color: white;
 }
+
+.pagination {
+  display: inline-block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination li {
+  color: white;
+  text-decoration: none;
+  display: inline;
+  padding-left: 16px;
+  float: left;
+}
+
+.bContainer {
+  padding-left: 32px;
+}
+
+.navvy {
+  height: 96px;
+  float:left;
+  width: 100%;
+}
+
+.fatcattyLogo {
+  display: inline;
+  float: left;
+}
+
+.navItems {
+  float:left;
+  padding-left:8px;
+  display: inline;
+}
+
+.navItem {
+  display: inline-block;
+  padding-left:8px;
+  float:left;
+}
+
+.navItem a {
+font-size: 24px;
+}
+
+.navItem img {
+padding-right: 8px;
+}

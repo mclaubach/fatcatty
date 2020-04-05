@@ -1,25 +1,20 @@
-<div id="navvy" style="padding-bottom: 10px;">
-<div style="float: left;">
+<div class="navvy">
+  <div class=fatcattyLogo>
   <%= link_to image_tag("logonav.png"), root_path %>
-</div>
-<div style="padding-top: 10px; padding-botton: 5px;">
-  <%= image_tag("archive.png") %><%= link_to(' archive ', archives_path) %>
-  <%= image_tag("gallery.png") %><%= link_to(' gallery ', works_path) %>
-  <%= image_tag("random.png") %><%= link_to('random post ', posts_showrandom_path) %>
-  <%= image_tag("about.png") %><a href="../abt"> about </a>
-  <%= image_tag("golf.png") %><a href="../golf"> golf </a>
-  <%= image_tag("sscico.png") %><a href="../ssc"> smileysuncoin </a>
-  <% if admin_signed_in? %>
-    <%= image_tag("bullet.png") %><%= link_to('logout', destroy_admin_session_path) %>
-   <% else %>
-    <%= image_tag("bullet.png") %><%= link_to('login', new_admin_session_path) %>
-  <% end %>
-</div>
-<div>
-  view posts tagged:
-    <a href="../tags/culture">culture</a>,
-    <a href="../tags/music">music</a>,
-    <a href="../tags/videos">videos</a>,
-    <a href="../tags/sports">sports</a>
+  </div>
+<div class="navItems">
+  <ul>
+    <li class="navItem"><%= image_tag("archive.png") %><%= link_to('archive ', archives_path) %></li>
+    <li class="navItem"><%= image_tag("gallery.png") %><%= link_to('gallery ', works_path) %></li>
+    <li class="navItem"><%= image_tag("random.png") %><%= link_to('random post ', posts_showrandom_path) %></li>
+    <li class="navItem"><%= image_tag("about.png") %><a href="../abt">about </a></li>
+    <li class="navItem"><%= image_tag("golf.png") %><a href="../golf">golf </a></li>
+    <li class="navItem"><%= image_tag("sscico.png") %><a href="../ssc">smileysuncoin </a></li>
+    <% if admin_signed_in? %>
+      <li class="navItem"><%= image_tag("bullet.png") %><%= link_to('logout',destroy_admin_session_path, method: :destroy) %></li>
+     <% else %>
+      <li class="navItem"><%= image_tag("bullet.png") %><%= link_to('login',new_admin_session_path) %></li>
+    <% end %>
+  </ul>
 </div>
 </div>

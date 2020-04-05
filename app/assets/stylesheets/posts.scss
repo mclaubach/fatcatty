@@ -8,18 +8,11 @@ body, html {
 }
 
 .tags-cloud {
-  margin-top: 10px;
   padding: 10px;
 }
 
-.top-pad {
-  padding: 10px;
-}
-.glassy-bg{
-  box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
-  background: black;
-  border-radius: 4px;
-  padding-bottom: 4px;
+.postField {
+  padding-bottom: 8px;
 }
 
 .mt{
@@ -29,10 +22,10 @@ body, html {
   margin-bottom: 0px;
 }
 
-.pt{
+.pt {
   padding-top: 0px;
 }
-.pb{
+.pb {
   padding-bottom: 0px;
 }
 
@@ -40,10 +33,6 @@ body, html {
   margin-bottom: 0px;
   margin-top: 0px;
   padding-bottom: 2px;
-}
-
-#hideshow{
-  color: #2199e8;
 }
 
 #player.full_frame{
