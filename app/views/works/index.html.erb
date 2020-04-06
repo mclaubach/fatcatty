@@ -1,6 +1,6 @@
 <h2>works</h2>
 <h4><%= sortable "created_at", "view dsc/asc" %></h4>
-<div class="workDiv" id="<%= works.id %>">
+<div class="workDiv">
 <% @works.each do |work| %>
   <div><%= work.title if work %></div>
   <div><%= link_to image_tag(work.image), work if work %></div>
