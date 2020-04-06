@@ -7,7 +7,7 @@ class WorksController < ApplicationController
 
   def index
 #   @works = Work.all
-  @works = Work.paginate(page: params[:page], per_page: 9).order('created_at DESC')
+  @works = Work.paginate(page: params[:page], per_page: 12).order('created_at DESC')
   end
 
   def show
@@ -36,13 +36,5 @@ private
 def work_params
   params.require(:work).permit(:image, :title)
 end
-
-  def sort_column
-    Work.column_names.include?(params[:sort]) ? params[:sort] : "created_at"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
 
 end

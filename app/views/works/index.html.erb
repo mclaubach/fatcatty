@@ -1,8 +1,9 @@
 <h2>works</h2>
-<%= link_to "new work of art", works_new_path %>
+<div><%= link_to "new work of art", works_new_path %></div>
 <div class="workDiv">
 <% @works.each do |work| %>
   <div><%= work.title if work %></div>
   <div><%= link_to image_tag(work.image), work if work %></div>
+  <div><%= work.created_at if work %></div>
 <% end %>
 <div><%= paginate @works %></div>
