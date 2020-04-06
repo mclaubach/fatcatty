@@ -170,16 +170,17 @@ a:visited {
 }
 
 body {
-  padding-left: 16px;
+  padding-left: 4%;
   padding-top: 16px;
 }
 
-.work {
-  padding-left: 5px;
-  padding-right: 5px;
-  float: left;
+.workDiv a img {
+  max-width: 350px;
 }
 
-.work a img{
+.workDiv {
+  padding-left: 5px;
+  padding-right: 5px;
   max-width: 350px;
+  float: left;
 }
