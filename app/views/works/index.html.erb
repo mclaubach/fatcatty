@@ -1,5 +1,7 @@
+<% if admin_signed_in? %>
+<%= link_to "new work of art", works_new_path %>
+<% else %>
 <h2>works</h2>
-<div><%= link_to "new work of art", works_new_path %></div>
 <div class="workDiv">
 <% @works.each do |work| %>
   <div><%= work.title if work %></div>

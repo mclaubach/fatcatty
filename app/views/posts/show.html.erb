@@ -1,15 +1,14 @@
-  <div class="large-12 columns border border-box glassy-bg mt pt" html="true">
+  <div html="true">
     <strong><%= h(@post.title) %></strong><br />
-    <sup class="text-muted">from <%= time_ago_in_words(@post.created_at)%> ago</sup>
-    <sup class="text-muted">on <%= @post.created_at.strftime("%F") %> </sup><br />
     <div class="mb pb">
       <%= h(raw @post.body) %>
     </div>
     <div class="tags">
       tags: <%=raw tag_links(@post.all_tags)%>
     </div>
-    <br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <div>
+    <div class="text-muted">from <%= time_ago_in_words(@post.created_at)%> ago</div>
+    <div class="text-muted">on <%= @post.created_at.strftime("%F") %> </div><br />
+    <div class="postSpacer">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</div>
       <% if admin_signed_in? %>
       <%= button_to "Delete", post_path(@post), method: :delete %>
       <% else %>
