@@ -24,6 +24,10 @@ a {
   color: rgb(48, 128, 222);
 }
 
+body {
+  width:80%;
+}
+
 .pagination {
   display: inline-block;
   color: white;
