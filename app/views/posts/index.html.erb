@@ -5,6 +5,7 @@
 <h2>blog</h2>
 <%= render partial: @posts %>
 </div>
+<div><%= paginate @posts %></div>
 <div class="tags-cloud">
   <h4> tag cloud</h4>
   <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
