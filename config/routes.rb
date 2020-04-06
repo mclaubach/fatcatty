@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'posts/showrandom'
   get 'posts/delete'
   get 'works/delete'
+  get 'works/new'
 
   root 'posts#index'
   resources :works, only: [:index, :show, :create, :destroy]

@@ -1,5 +1,5 @@
 <h2>works</h2>
-<h4><%= sortable "created_at", "view dsc/asc" %></h4>
+<%= link_to "new work of art", works_new_path %>
 <div class="workDiv">
 <% @works.each do |work| %>
   <div><%= work.title if work %></div>
