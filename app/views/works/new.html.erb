@@ -3,13 +3,13 @@
 <div class="row text-center">
   <%= form_for(Work.new) do |f| %>
     <div>
-      <%= f.text_field :title, placeholder: "title" %>
+      <%= f.text_field :title, placeholder: "title", size: '40' %>
     </div>
-    <div>
+    <div style="padding-top:16px;">
       <%= f.file_field :image %>
     </div>
-    <div>
-      <%= f.submit "s u b m i t", class: "button"%>
+    <div style="padding-top:16px;">
+      <%= f.submit "s u b m i t", class: "bigButton"%>
     </div>
   <% end %>
 </div>
