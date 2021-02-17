@@ -1,0 +1,26 @@
+<% if admin_signed_in? %>
+<div style="width:50%;text-align:left;padding-top:32px;padding-left:24px;">
+  <%= form_for(Post.new, remote: true) do |f| %>
+    <div class="postField">
+      <%= f.text_field :title, placeholder: "title", size: 40 %>
+    </div>
+    <div class="postField", id="body">
+      <%= f.text_area :body, placeholder: "Your post", rows: 7 %>
+    </div>
+    <div class="postField" style="padding-top:8px;">
+      <%= f.text_field :all_tags, placeholder: "Tags separated with comma", size: 40 %>
+    </div>
+    <div class="postField">
+      <%= f.number_field :score, placeholder: "score x - x" %>
+    </div>
+    <div class="postField">
+      <%= f.submit "Post", class: "button"%>
+    </div>
+  <% end %>
+</div>
+<script>
+    CKEDITOR.replace( 'post_body' );
+</script>
+<% else %>
+<p>get outta here</p>
+<% end %>

@@ -1,0 +1,12 @@
+/* line 1, app/assets/stylesheets/ssc.scss */
+.sscbody {
+  position: relative;
+  float: left;
+  line-height: .75;
+  color: black;
+}
+
+/* line 8, app/assets/stylesheets/ssc.scss */
+.ssc img {
+  width: 100%;
+}

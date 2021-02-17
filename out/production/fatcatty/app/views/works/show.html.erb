@@ -1,0 +1,12 @@
+<div id="workofart" style="float:left;">
+<div>
+<%= @work.title %>
+<%= image_tag @work.image %>
+<%= @work.created_at.strftime("%F") %><br>
+<% if admin_signed_in? %>
+      <%= button_to "delete", @work, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% else %>
+    <% end %>
+</div>
+</div>

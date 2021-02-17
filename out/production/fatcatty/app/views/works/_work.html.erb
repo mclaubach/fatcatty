@@ -1,0 +1,9 @@
+<%= div_for work do %>
+  <div html="true">
+    <strong><%= link_to h(work.title), work %></strong><br />
+    <sup class="text-muted">from <%= time_ago_in_words(work.created_at)%> ago</sup><br />
+    <div class="tags">
+     <%= work.title)%>
+    </div>
+  </div>
+<% end %>

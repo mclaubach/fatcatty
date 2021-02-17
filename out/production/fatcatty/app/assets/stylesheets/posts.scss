@@ -1,0 +1,41 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, html {
+  background-color: black !important;
+  color: white !important;
+}
+
+.tags-cloud {
+  padding: 10px;
+}
+
+.postField {
+  padding-bottom: 8px;
+}
+
+.mt{
+  margin-top: 0px;
+}
+.mb {
+  margin-bottom: 0px;
+}
+
+.pt {
+  padding-top: 0px;
+}
+.pb {
+  padding-bottom: 0px;
+}
+
+.mb p{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 2px;
+}
+
+#player.full_frame{
+  width: 500px;
+  height: 500px;
+}

@@ -1,0 +1,11 @@
+<div class="archiveList">
+	<h2>archive</h2>
+	<% @post_months.sort.reverse.each do |month, posts| %>
+	<h5><%=h month.strftime("%B %Y") %></h5>
+	<ul>
+		<% for post in posts %>
+		<li><%=h link_to post.title, post_path(post) %></li>
+		<% end %>
+	</ul>
+	<% end %>
+</div>

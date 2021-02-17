@@ -1,0 +1,48 @@
+/* line 5, app/assets/stylesheets/posts.scss */
+body, html {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* line 10, app/assets/stylesheets/posts.scss */
+.tags-cloud {
+  padding: 10px;
+}
+
+/* line 14, app/assets/stylesheets/posts.scss */
+.postField {
+  padding-bottom: 8px;
+}
+
+/* line 18, app/assets/stylesheets/posts.scss */
+.mt {
+  margin-top: 0px;
+}
+
+/* line 21, app/assets/stylesheets/posts.scss */
+.mb {
+  margin-bottom: 0px;
+}
+
+/* line 25, app/assets/stylesheets/posts.scss */
+.pt {
+  padding-top: 0px;
+}
+
+/* line 28, app/assets/stylesheets/posts.scss */
+.pb {
+  padding-bottom: 0px;
+}
+
+/* line 32, app/assets/stylesheets/posts.scss */
+.mb p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 2px;
+}
+
+/* line 38, app/assets/stylesheets/posts.scss */
+#player.full_frame {
+  width: 500px;
+  height: 500px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80744770-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-80744770-1');
+    </script>
+    <title><%= content_for?(:title) ? yield(:title) : "(๑ↀᆺↀ๑) fatcatty" %></title>
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= auto_discovery_link_tag :atom, "/feeds.atom" %>
+    <%= auto_discovery_link_tag :rss, "/feed.rss" %>
+
+    <script type="text/javascript">
+      for(var instanceName in CKEDITOR.instances)
+          CKEDITOR.instances[instanceName].updateElement();
+    </script>
+
+  </head>
+  <body>
+    <div>
+      <%= render "layouts/nav" %>
+      <div class="bContainer">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

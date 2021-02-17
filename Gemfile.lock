@@ -215,6 +215,7 @@ DEPENDENCIES
   non-stupid-digest-assets
   paperclip!
   pg (~> 0.20.0)
+  rack
   rails (= 4.2.11)
   rails_12factor
   sass-rails
