@@ -1,12 +1,12 @@
 /thanks to work of barry bonds
-
 /thanks to trance rap, the radio dept, wild nothing, and v a p o r w a v e, rich homie quan
-
 /thanks to all the homies
 
-=== things left to do
+=== todo
 ---
-* 3 across works on web
-* improve store layout
-* improve tunes - add framework for artists / bios / about tracks / selecting lists of songs
-*
+* 3 across works on web, responsive layout
+* add store, only catties
+* reorder tags new -> old, check posts ordering elsewhere
+* add more nav links
+* clean up the universe
+* crawler sleeve baller sleeve shirts, fatctty 'towels', czech hedgehog bellybutton tee's (ch on back of neck)
