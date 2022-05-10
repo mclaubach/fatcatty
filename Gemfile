@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby '2.7.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11'
 gem 'bundler', '1.17.3'
@@ -16,7 +16,9 @@ gem 'aws-sdk', '< 3.0'
 gem 'devise'
 gem 'high_voltage', '~> 3.0.0'
 gem 'kaminari'
+gem 'bigdecimal', '1.3.5'
 gem 'non-stupid-digest-assets'
+gem 'mimemagic', '0.3.0',  :git=> 'https://github.com/mimemagicrb/mimemagic', ref: 'a4b038c6c1b9d76dac33d5711d28aaa9b4c42c66'
 gem 'rails_12factor', group: :production
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
