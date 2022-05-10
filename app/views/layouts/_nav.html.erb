@@ -11,14 +11,14 @@
       </div>
     </li>
     <li><a href="../works" class="dropbtn"><%= image_tag("gallery.png") %> works</a></li>
-    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn"><%= image_tag("about.png") %> more</a>
+    <li class="dropdown"><a href="../more" class="dropbtn"><%= image_tag("about.png") %> more</a>
       <div class="dropdown-content">
+        <a href="../tunes"><%= image_tag("music.png") %> tunes </a>
         <a href="../golf"><%= image_tag("golf.png") %> golf </a>
         <a href="../ssc"><%= image_tag("sscico.png") %> smileysuncoin </a>
         <a href="../carfool"><%= image_tag("bullet.png") %>carfool </a>
       </div>
     </li>
-    <li><a href="../tunes"><%= image_tag("music.png") %> tunes </a></li>
     <li><a href="../abt" class="dropbtn"><%= image_tag("random.png") %> about</a></li>
     <% if admin_signed_in? %>
       <li><a href="../admins/sign_out" class="dropbtn"><%= image_tag("bullet.png") %>logout</a></li>
