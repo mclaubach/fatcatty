@@ -1,16 +1,13 @@
 <%= div_for post do %>
     <span class="postTitle"><%= image_tag("archive.png") %> <%= link_to h(post.title), post %></span>
+    <div class="from">
+      posted <%= time_ago_in_words(post.created_at)%> ago
+    </div>
     <div id="<%= post.id %>">
       <%= h(raw post.body) %>
     </div>
-    <div>
-      score: <%= raw number_with_precision(post.score, :precision => 0) %>/100
-    </div>
     <div class="tags">
      tags: <%=raw tag_links(post.all_tags)%>
-    </div>
-    <div class="from">
-      from <%= time_ago_in_words(post.created_at)%> ago
     </div>
     <div class="postSpacer"></div>
 <% end %>
