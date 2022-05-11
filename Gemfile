@@ -20,7 +20,6 @@ gem 'bigdecimal', '1.3.5'
 gem 'non-stupid-digest-assets'
 gem 'mimemagic', '0.3.0',  :git=> 'https://github.com/mimemagicrb/mimemagic', ref: 'a4b038c6c1b9d76dac33d5711d28aaa9b4c42c66'
 gem 'rails_12factor', group: :production
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 # Use ActiveModel has_secure_password
