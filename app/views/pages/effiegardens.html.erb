@@ -1,48 +1,84 @@
+<style>
+    li {
+        margin-bottom: 10px;
+    }
+    .still-need {
+        font-weight: bold;
+        color: #a02b14;
+    }
+</style>
 <div class= "large-9 columns" id="aboutcontainer" style="float:left;">
-<h3>Effie Gardens</h3>
+<h2>Effie Gardens</h2>
   <p>this is where i'll publish progress<p>
+  <p></p>
   <p class="masterp">
-    5-23
-    my peppers have a arrived and i have to figure out how to care for them
-    the rest of my stuff is arriving on friday and saturday
-    because
-
-      <style>
-          li {
-              margin-bottom: 10px;
-          }
-          .still-need {
-              font-weight: bold;
-              color: red;
-          }
-      </style>
-  <h1>Shopping Materials List:</h1>
-  <ul>
-    <li>Pepper plants - yes</li>
-    <li>Lettuce seeds - yes</li>
-    <li>Bean seeds - yes</li>
-    <li>Raised beds - yes</li>
-    <li>Trovel - yes</li>
-    <li>Hoe - yes</li>
-    <li>Claw - yes</li>
-    <li>Gloves - yes</li>
-    <li>Tote - yes</li>
-    <li>Potting soil - yes</li>
-    <li>Watering can - yes</li>
-    <li>Hose - yes</li>
-    <li>Planner book - yes</li>
-  </ul>
-
-  <h1>Still Need:</h1>
-  <ul>
-    <li class="still-need">Nutrition - Home Depot? Still need to decide</li>
-    <li class="still-need">Cilantro plant - No, get at 365</li>
-    <li class="still-need">Raised bed soil - Home Depot, Saturday morning</li>
-  </ul>
-
-
-
+    <p>5-23 upcoming playbook<br>
+    my peppers have a arrived and i have to figure out how to care for them<br>
+    the rest of my stuff is arriving on friday and saturday<br>
+    i have the materials i need to harden my peppers arriving wednesday<br>
+    i will
+  </p>
+  <p>Determine sun patterns & ideal plot location for 3 appropriate edible plants in order to prepare a CAD style garden plan of selected plot with plant locations marked by May 21. </p>
+  <p>Create a shopping list and purchase 100% of required materials by May 24th.</p>
+  <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.</p>
+  <p>Perform weekly garden inspections and complete a weekly ‘Garden Progress Report’ to ensure the garden is maintaining an 80% germination/survival rate at day 60.</p>
 
 
   </p>
+  <h3>materials</h3>
+  <h1>acquired materials:</h1>
+  <ul id="acquired">
+    <!-- Each list item has a unique id for targeting, and a class for easier JavaScript targeting -->
+    <li id="item1" class="item">Pepper plants</li>
+    <li id="item2" class="item">Lettuce seeds</li>
+    <li id="item3" class="item">Bean seeds</li>
+    <li id="item4" class="item">Raised beds</li>
+    <li id="item5" class="item">Trovel</li>
+    <li id="item6" class="item">Hoe</li>
+    <li id="item7" class="item">Claw</li>
+    <li id="item8" class="item">Gloves</li>
+    <li id="item9" class="item">Tote</li>
+    <li id="item10" class="item">Potting soil</li>
+    <li id="item11" class="item">Watering can</li>
+    <li id="item12" class="item">Hose</li>
+    <li id="item13" class="item">Planner book</li>
+  </ul>
+
+  <h1>Still Need:</h1>
+  <ul id="stillNeed">
+    <li id="item4" class="item still-need">Nutrition - Home Depot?</li>
+    <li id="item5" class="item still-need">Cilantro plant - No, get at 365</li>
+    <li id="item6" class="item still-need">Raised bed soil - Home Depot, Saturday morning</li>
+  </ul>
+
+  <script>
+      // This function will move an item to a different list when it's clicked
+      function moveItem(event) {
+          var item = event.target;
+          var acquiredList = document.getElementById('acquired');
+          var stillNeedList = document.getElementById('stillNeed');
+
+          if (item.parentNode === acquiredList) {
+              // Remove from acquired list and add to still need list
+              acquiredList.removeChild(item);
+              stillNeedList.appendChild(item);
+              // Change color to red
+              item.classList.add('still-need');
+          } else {
+              // Remove from still need list and add to acquired list
+              stillNeedList.removeChild(item);
+              acquiredList.appendChild(item);
+              // Change color back to default
+              item.classList.remove('still-need');
+          }
+      }
+
+      // Add the click event listener to each item
+      var items = document.getElementsByClassName('item');
+      for (var i = 0; i < items.length; i++) {
+          items[i].addEventListener('click', moveItem);
+      }
+  </script>
+
+
 </div>
