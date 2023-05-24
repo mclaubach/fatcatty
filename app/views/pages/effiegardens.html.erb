@@ -1,4 +1,36 @@
 <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    progress {
+        margin-left: 20px;
+        width: 30%;
+        height: 20px;
+        background-color: #f3f3f3;
+        border: none;
+    }
+    progress::-webkit-progress-bar {
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+    progress::-webkit-progress-value {
+        background: lightgreen;
+        border-radius: 10px;
+        animation: progress 2s ease-out forwards;
+    }
+    @keyframes progress {
+        0% {
+            width: 0%;
+        }
+    }
     li {
         margin-bottom: 10px;
         transition: all 0.55s ease;
@@ -22,10 +54,10 @@
     i have the materials i need to harden my peppers arriving wednesday<br>
     i will
   </p>
-  <p>Determine sun patterns & ideal plot location for 3 appropriate edible plants in order to prepare a CAD style garden plan of selected plot with plant locations marked by May 21. </p>
-  <p>Create a shopping list and purchase 100% of required materials by May 24th.</p>
-  <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.</p>
-  <p>Perform weekly garden inspections and complete a weekly ‘Garden Progress Report’ to ensure the garden is maintaining an 80% germination/survival rate at day 60.</p>
+  <p>Determine sun patterns & ideal plot location for 3 appropriate edible plants in order to prepare a CAD style garden plan of selected plot with plant locations marked by May 21.<progress value="70" max="100"></progress></p>
+  <p>Create a shopping list and purchase 100% of required materials by May 24th.<progress value="70" max="100"></progress></p>
+  <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.<progress value="70" max="100"></progress></p>
+  <p>Perform weekly garden inspections and complete a weekly ‘Garden Progress Report’ to ensure the garden is maintaining an 80% germination/survival rate at day 60.<progress value="70" max="100"></progress></p>
 
 
   </p>
@@ -87,6 +119,13 @@
       for (var i = 0; i < items.length; i++) {
           items[i].addEventListener('click', moveItem);
       }
+  </script>
+
+  <script>
+      document.querySelectorAll('progress').forEach((progress) => {
+          const value = progress.getAttribute('value');
+          progress.style.setProperty('--value', value);
+      });
   </script>
 
 
