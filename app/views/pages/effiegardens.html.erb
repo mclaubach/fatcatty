@@ -1,10 +1,14 @@
 <style>
     li {
         margin-bottom: 10px;
+        transition: all 0.55s ease;
     }
     .still-need {
-        font-weight: bold;
-        color: #a02b14;
+        color: #e0b146;
+    }
+    .moving {
+        transform: scale(1.2);
+        opacity: 0.55;
     }
 </style>
 <div class= "large-9 columns" id="aboutcontainer" style="float:left;">
@@ -25,8 +29,8 @@
 
 
   </p>
-  <h3>materials</h3>
-  <h1>acquired materials:</h1>
+  <h2>materials</h2>
+  <h3>acquired materials:</h3>
   <ul id="acquired">
     <!-- Each list item has a unique id for targeting, and a class for easier JavaScript targeting -->
     <li id="item1" class="item">Pepper plants</li>
@@ -44,7 +48,7 @@
     <li id="item13" class="item">Planner book</li>
   </ul>
 
-  <h1>Still Need:</h1>
+  <h3>still need:</h3>
   <ul id="stillNeed">
     <li id="item4" class="item still-need">Nutrition - Home Depot?</li>
     <li id="item5" class="item still-need">Cilantro plant - No, get at 365</li>
@@ -52,11 +56,16 @@
   </ul>
 
   <script>
-      // This function will move an item to a different list when it's clicked
       function moveItem(event) {
           var item = event.target;
           var acquiredList = document.getElementById('acquired');
           var stillNeedList = document.getElementById('stillNeed');
+
+          // Add 'moving' class to animate the item
+          item.classList.add('moving');
+          setTimeout(function() {
+              item.classList.remove('moving');
+          }, 500); // Remove the class after the animation completes
 
           if (item.parentNode === acquiredList) {
               // Remove from acquired list and add to still need list
