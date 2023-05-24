@@ -1,6 +1,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-    body {
+    .cursive {
         font-family: 'Satisfy', cursive;
         color: #556b2f;
     }
@@ -33,7 +33,6 @@
     .tab-content > div {
         display: none;
         padding: 20px;
-        background: #ffffff;
         border: 2px solid #32cd32;
         border-radius: 10px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -42,7 +41,6 @@
 
     .tabs > .active {
         background: #006400;
-        color: #ffffff;
     }
 
     .tab-content > .active {
@@ -113,7 +111,7 @@
     }
 </style>
 <div class= "large-9 columns" id="aboutcontainer" style="float:left;">
-  <p><a class="vines" href="https://www.fatcatty.com/tags/effiegardens">Effie Gardens</a></p>
+  <p><a class="vines cursive" href="https://www.fatcatty.com/tags/effiegardens">Effie Gardens</a></p>
   <p>Determine sun patterns & ideal plot location for 3 appropriate edible plants in order to prepare a CAD style garden plan of selected plot with plant locations marked by May 21.<progress value="90" max="100"></progress></p>
   <p>Create a shopping list and purchase 100% of required materials by May 24th.<progress value="70" max="100"></progress></p>
   <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.<progress value="10" max="100"></progress></p>
@@ -144,7 +142,7 @@
     <li id="item6" class="item still-need">Raised bed soil - Home Depot, Saturday morning</li>
   </ul>
 
-  <div class="tabs">
+  <div class="tabs cursive">
     <div class="active" onclick="switchTab(0)">Peppers</div>
     <div onclick="switchTab(1)">Lettuces</div>
     <div onclick="switchTab(2)">Beans</div>
