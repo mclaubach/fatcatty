@@ -1,24 +1,51 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+    body {
+        background: #f0f5f9;
+        font-family: 'Satisfy', cursive;
+        color: #556b2f;
+    }
     .tabs {
         display: flex;
-    }
-    .tabs > div {
+        justify-content: center;
         padding: 10px;
-        border: 1px solid #000;
+        text-align: center;
+    }
+
+    .tabs > div {
+        flex: 1;
+        padding: 15px;
+        background: #adff2f;
+        background: linear-gradient(45deg, #adff2f, #32cd32);
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
     }
+
     .tabs > div:not(:last-child) {
-        border-right: none;
+        margin-right: 10px;
     }
+
+    .tabs > div:hover {
+        transform: scale(1.1);
+    }
+
     .tab-content > div {
         display: none;
-        padding: 10px;
-        border: 1px solid #000;
+        padding: 20px;
+        background: #ffffff;
+        border: 2px solid #32cd32;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 10px;
     }
+
     .tabs > .active {
-        background: #000;
-        color: #fff;
+        background: #006400;
+        color: #ffffff;
     }
+
     .tab-content > .active {
         display: block;
     }
