@@ -121,19 +121,6 @@
     <li id="item6" class="item still-need">Raised bed soil - Home Depot, Saturday morning</li>
   </ul>
 
-  <script>
-      var tabs = document.querySelectorAll(".tabs > div");
-      var contents = document.querySelectorAll(".tab-content > div");
-
-      function switchTab(index) {
-          tabs.forEach(tab => tab.classList.remove("active"));
-          contents.forEach(content => content.classList.remove("active"));
-
-          tabs[index].classList.add("active");
-          contents[index].classList.add("active");
-      }
-  </script>
-
   <div class="tabs">
     <div class="active" onclick="switchTab(0)">Peppers</div>
     <div onclick="switchTab(1)">Lettuces</div>
@@ -184,6 +171,17 @@
           const value = progress.getAttribute('value');
           progress.style.setProperty('--value', value);
       });
+
+      var tabs = document.querySelectorAll(".tabs > div");
+      var contents = document.querySelectorAll(".tab-content > div");
+
+      function switchTab(index) {
+          tabs.forEach(tab => tab.classList.remove("active"));
+          contents.forEach(content => content.classList.remove("active"));
+
+          tabs[index].classList.add("active");
+          contents[index].classList.add("active");
+      }
   </script>
 
 
