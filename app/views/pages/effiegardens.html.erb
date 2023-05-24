@@ -1,4 +1,27 @@
 <style>
+    .tabs {
+        display: flex;
+    }
+    .tabs > div {
+        padding: 10px;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    .tabs > div:not(:last-child) {
+        border-right: none;
+    }
+    .tab-content > div {
+        display: none;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+    .tabs > .active {
+        background: #000;
+        color: #fff;
+    }
+    .tab-content > .active {
+        display: block;
+    }
     @keyframes grow-vines {
         0% {
             background-size: 100% 0%;
@@ -10,13 +33,13 @@
     a.vines {
         display: inline-block;
         color: green;
-        font-size: 24px;
+        font-size: 48px;
         text-decoration: none;
         background: url('https://static.vecteezy.com/system/resources/previews/013/483/461/original/leaf-vine-isolate-on-transparent-background-file-png.png');
         background-size: 100% 0%;
         background-repeat: repeat;
-        transition: color 1s ease;
-        animation: grow-vines 30s linear forwards;
+        transition: color 2s ease;
+        animation: grow-vines 40s linear forwards;
     }
 
     a.vines:hover {
@@ -47,7 +70,7 @@
     progress::-webkit-progress-value {
         background: #15e1f5;
         border-radius: 10px;
-        animation: progress 12s ease-out forwards;
+        animation: progress 20s ease-out forwards;
     }
     @keyframes progress {
         0% {
@@ -67,20 +90,11 @@
     }
 </style>
 <div class= "large-9 columns" id="aboutcontainer" style="float:left;">
-  <p><a class="vines" href="https://www.fatcatty.com/tags/effiegardens">Effie Gardens</a><p>
-  <p class="masterp">
-    <p>5-23 upcoming playbook<br>
-    my peppers have a arrived and i have to figure out how to care for them<br>
-    the rest of my stuff is arriving on friday and saturday<br>
-    i have the materials i need to harden my peppers arriving wednesday<br>
-    i will harden the peppers and start the seeds wed + thr + fri + sat + sun + mon
-  </p>
+  <p><a class="vines" href="https://www.fatcatty.com/tags/effiegardens">Effie Gardens</a></p>
   <p>Determine sun patterns & ideal plot location for 3 appropriate edible plants in order to prepare a CAD style garden plan of selected plot with plant locations marked by May 21.<progress value="90" max="100"></progress></p>
   <p>Create a shopping list and purchase 100% of required materials by May 24th.<progress value="70" max="100"></progress></p>
   <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.<progress value="10" max="100"></progress></p>
   <p>Perform weekly garden inspections and complete a weekly ‘Garden Progress Report’ to ensure the garden is maintaining an 80% germination/survival rate at day 60.<progress value="0" max="100"></progress></p>
-
-  </p>
   <h2>materials</h2>
   <h3>acquired materials:</h3>
   <ul id="acquired">
@@ -106,6 +120,32 @@
     <li id="item5" class="item still-need">Cilantro plant - No, get at 365</li>
     <li id="item6" class="item still-need">Raised bed soil - Home Depot, Saturday morning</li>
   </ul>
+
+  <script>
+      var tabs = document.querySelectorAll(".tabs > div");
+      var contents = document.querySelectorAll(".tab-content > div");
+
+      function switchTab(index) {
+          tabs.forEach(tab => tab.classList.remove("active"));
+          contents.forEach(content => content.classList.remove("active"));
+
+          tabs[index].classList.add("active");
+          contents[index].classList.add("active");
+      }
+  </script>
+
+  <div class="tabs">
+    <div class="active" onclick="switchTab(0)">Peppers</div>
+    <div onclick="switchTab(1)">Lettuces</div>
+    <div onclick="switchTab(2)">Beans</div>
+    <div onclick="switchTab(3)">Herbs</div>
+  </div>
+  <div class="tab-content">
+    <div class="active">How to Care for ze rare pepes</div>
+    <div>Lettuce care for lettuce</div>
+    <div>Beans</div>
+    <div>Herbs and Erbs</div>
+  </div>
 
   <script>
       function moveItem(event) {
