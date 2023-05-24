@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
     .cursive {
         font-family: 'Satisfy', cursive;
-        color: #556b2f;
+        color: #c2e18e;
     }
     .tabs {
         display: flex;
@@ -116,6 +116,20 @@
   <p>Create a shopping list and purchase 100% of required materials by May 24th.<progress value="70" max="100"></progress></p>
   <p>Prepare the plot, irrigation, and plant 100% of the seeds/plants by May 31st.<progress value="10" max="100"></progress></p>
   <p>Perform weekly garden inspections and complete a weekly ‘Garden Progress Report’ to ensure the garden is maintaining an 80% germination/survival rate at day 60.<progress value="0" max="100"></progress></p>
+
+  <div class="tabs cursive">
+    <div class="active" onclick="switchTab(0)">Peppers</div>
+    <div onclick="switchTab(1)">Lettuces</div>
+    <div onclick="switchTab(2)">Beans</div>
+    <div onclick="switchTab(3)">Herbs</div>
+  </div>
+  <div class="tab-content">
+    <div class="active">How to Care for ze rare pepes</div>
+    <div>Lettuce care for lettuce</div>
+    <div>Beans</div>
+    <div>Herbs and Erbs</div>
+  </div>
+
   <h2>materials</h2>
   <h3>acquired materials:</h3>
   <ul id="acquired">
@@ -141,19 +155,6 @@
     <li id="item5" class="item still-need">Cilantro plant - No, get at 365</li>
     <li id="item6" class="item still-need">Raised bed soil - Home Depot, Saturday morning</li>
   </ul>
-
-  <div class="tabs cursive">
-    <div class="active" onclick="switchTab(0)">Peppers</div>
-    <div onclick="switchTab(1)">Lettuces</div>
-    <div onclick="switchTab(2)">Beans</div>
-    <div onclick="switchTab(3)">Herbs</div>
-  </div>
-  <div class="tab-content">
-    <div class="active">How to Care for ze rare pepes</div>
-    <div>Lettuce care for lettuce</div>
-    <div>Beans</div>
-    <div>Herbs and Erbs</div>
-  </div>
 
   <script>
       function moveItem(event) {
